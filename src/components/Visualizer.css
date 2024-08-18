@@ -1,0 +1,15 @@
+.visualizer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 300px;
+    margin: 20px 0;
+  }
+  
+  .bar {
+    width: 20px;
+    background-color: teal;
+    margin: 0 5px;
+    transition: height 0.3s;
+  }
+  
