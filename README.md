@@ -1,6 +1,6 @@
 # File-Converter
 
-Project on Compression and Decompression
+Project on Sorting Visualizer
 
 ## Screenshots
 
