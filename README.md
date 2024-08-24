@@ -1,3 +1,13 @@
+# File-Converter
+
+Project on Compression and Decompression
+
+## Screenshots
+
+![Screenshot 1](screenshots/1.png)
+
+![Screenshot 2](screenshots/2.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
