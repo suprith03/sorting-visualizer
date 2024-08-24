@@ -1,6 +1,7 @@
-# File-Converter
+# Sorting - Visualizer
 
-Project on Compression and Decompression
+Project on Sorting Visualizer - 
+few Algorithms are Merge, Quick, and Insertion Sort.
 
 ## Screenshots
 
