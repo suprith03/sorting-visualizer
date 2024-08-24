@@ -1,5 +1,4 @@
 import React from 'react';
-import './Visualizer.css';
 
 const Visualizer = ({ array }) => {
   const maxBarWidth = array.length > 10 ? 30 : 50;

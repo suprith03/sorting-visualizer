@@ -3,11 +3,12 @@ import InputForm from './components/InputForm';
 import SortButtons from './components/SortButtons';
 import Visualizer from './components/Visualizer';
 import ResetButton from './components/ResetButton';
-import './index.css';
+import './App.css';
 
 const App = () => {
   const [array, setArray] = useState([]);
   const [sorting, setSorting] = useState(false);
+  const [currentAlgorithm, setCurrentAlgorithm] = useState(''); 
 
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -84,6 +85,7 @@ const App = () => {
     if (sorting || array.length === 0) return;
 
     setSorting(true);
+    setCurrentAlgorithm(algorithm); 
     let sortedArray;
 
     switch (algorithm) {
@@ -106,12 +108,14 @@ const App = () => {
 
   const resetArray = () => {
     setArray([]);
+    setCurrentAlgorithm(''); 
   };
 
   return (
     <div className="app">
       <h1>Sorting Visualizer</h1>
       <InputForm array={array} setArray={setArray} />
+      {currentAlgorithm && <h2>Applying {currentAlgorithm.charAt(0).toUpperCase() + currentAlgorithm.slice(1)} Sort ..</h2>}
       <Visualizer array={array} />
       <div className="buttons-container">
         <SortButtons sortArray={sortArray} />
