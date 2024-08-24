@@ -1,4 +1,4 @@
-# File-Converter
+# Sorting - Visaulizer
 
 Project on Sorting Visualizer
 
