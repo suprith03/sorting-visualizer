@@ -8,6 +8,7 @@ import './App.css';
 const App = () => {
   const [array, setArray] = useState([]);
   const [sorting, setSorting] = useState(false);
+  const [sortingDone, setSortingDone] = useState(false); // New state for sorting completion
   const [currentAlgorithm, setCurrentAlgorithm] = useState(''); 
 
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -85,6 +86,7 @@ const App = () => {
     if (sorting || array.length === 0) return;
 
     setSorting(true);
+    setSortingDone(false); // Reset sorting done state
     setCurrentAlgorithm(algorithm); 
     let sortedArray;
 
@@ -104,18 +106,28 @@ const App = () => {
 
     setArray(sortedArray);
     setSorting(false);
+    setSortingDone(true); // Set sorting done state to true
   };
 
   const resetArray = () => {
     setArray([]);
     setCurrentAlgorithm(''); 
+    setSortingDone(false); // Reset sorting done state
   };
 
   return (
     <div className="app">
       <h1>Sorting Visualizer</h1>
       <InputForm array={array} setArray={setArray} />
-      {currentAlgorithm && <h2>Applying {currentAlgorithm.charAt(0).toUpperCase() + currentAlgorithm.slice(1)} Sort ..</h2>}
+      {currentAlgorithm && (
+        <h2>
+          {sorting
+            ? `Applying ${currentAlgorithm.charAt(0).toUpperCase() + currentAlgorithm.slice(1)} Sort ..`
+            : sortingDone
+            ? `${currentAlgorithm.charAt(0).toUpperCase() + currentAlgorithm.slice(1)} Sort has been Done`
+            : null}
+        </h2>
+      )}
       <Visualizer array={array} />
       <div className="buttons-container">
         <SortButtons sortArray={sortArray} />

@@ -15,6 +15,11 @@ h1 {
   color: #1f1f1f;
   margin-bottom: 30px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+h1:hover {
+  transform: scale(1.05); 
 }
 
 .app {
@@ -46,6 +51,7 @@ input:focus {
   border-color: #005fa3;
   box-shadow: 0 0 10px rgba(0, 95, 163, 0.5);
   outline: none;
+  background-color: #ffffff;
 }
 
 .buttons-container {
@@ -72,7 +78,7 @@ button {
 button:hover {
   background-color: #0060a4;
   transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0, 95, 163, 0.4);
+  box-shadow: 0 6px 12px rgba(0, 95, 163, 0.4);
 }
 
 button:active {
@@ -110,7 +116,7 @@ button:active {
 
 .bar {
   margin: 0 5px;
-  background-color: green;
+  background-color: #28a745;
   transition: height 0.3s, background-color 0.3s;
   position: relative;
   display: flex;
@@ -125,6 +131,11 @@ button:active {
   
 }
 
+.bar:hover {
+  transform: scale(1.05); 
+  background-color: #218838; 
+}
+
 .bar p {
   margin: 0;
   padding: 5px 0;
@@ -132,5 +143,9 @@ button:active {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 5px 5px 0 0;
+}
+
+.bar:hover p {
+  background-color: rgba(0, 0, 0, 0.85); 
 }
 
