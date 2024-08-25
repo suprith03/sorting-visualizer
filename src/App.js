@@ -8,7 +8,7 @@ import './App.css';
 const App = () => {
   const [array, setArray] = useState([]);
   const [sorting, setSorting] = useState(false);
-  const [sortingDone, setSortingDone] = useState(false); // New state for sorting completion
+  const [sortingDone, setSortingDone] = useState(false); 
   const [currentAlgorithm, setCurrentAlgorithm] = useState(''); 
 
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -86,7 +86,7 @@ const App = () => {
     if (sorting || array.length === 0) return;
 
     setSorting(true);
-    setSortingDone(false); // Reset sorting done state
+    setSortingDone(false);
     setCurrentAlgorithm(algorithm); 
     let sortedArray;
 
@@ -106,13 +106,13 @@ const App = () => {
 
     setArray(sortedArray);
     setSorting(false);
-    setSortingDone(true); // Set sorting done state to true
+    setSortingDone(true); 
   };
 
   const resetArray = () => {
     setArray([]);
     setCurrentAlgorithm(''); 
-    setSortingDone(false); // Reset sorting done state
+    setSortingDone(false); 
   };
 
   return (
