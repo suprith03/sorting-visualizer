@@ -1,7 +1,6 @@
 # Sorting - Visualizer
 
-Project on Sorting Visualizer - 
-few Algorithms are Merge, Quick, and Insertion Sort.
+Project on Compression and Decompression
 
 ## Screenshots
 
